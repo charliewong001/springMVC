@@ -22,4 +22,5 @@ public class HelloController implements EnvironmentAware {
     public void setEnvironment(Environment arg0) {
         this.environment = arg0;
     }
+
 }
