@@ -1,5 +1,7 @@
 package web;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,8 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ModelAttributeController {
 
     @RequestMapping(value = "/modelAttribute")
-    public String handle(@ModelAttribute("age") String age) {
+    public String handle(@ModelAttribute("age") String age, Model model) {
+        Map<String, Object> m = model.asMap();
         System.out.println("age : " + age);
+        System.out.println("className : " + m.get("className"));
+        System.out.println("name : " + m.get("name"));
+        System.out.println("string : " + m.get("string"));
         return "index.jsp";
     }
 
@@ -23,7 +29,17 @@ public class ModelAttributeController {
     @ModelAttribute
     public void testModelAttribute2(@RequestParam("name") String name,
             Model model) {
-        System.out.println("name : " + name);
         model.addAttribute("name", name);
     }
+
+    @ModelAttribute("className")
+    public String testModelAttribute3() {
+        return this.getClass().getName();
+    }
+
+    @ModelAttribute()
+    public String testModelAttribute4() {
+        return "default paramName is string";
+    }
+
 }
