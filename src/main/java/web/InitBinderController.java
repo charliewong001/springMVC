@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * initBinder
+ * 
+ * @author Charlie
+ *
+ */
 @Controller
 public class InitBinderController {
 
