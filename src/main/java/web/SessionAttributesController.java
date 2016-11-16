@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+/**
+ * 
+ * @author Charlie
+ * @SessionAttributes
+ */
 @Controller
 @SessionAttributes(value = { "book", "description" }, types = { Double.class })
 public class SessionAttributesController {
