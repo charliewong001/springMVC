@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ * 
+ * @author Charlie
+ * @ModelAttribute用在方法上则用来设置参数
+ */
 @Controller
 public class ModelAttributeController {
 
