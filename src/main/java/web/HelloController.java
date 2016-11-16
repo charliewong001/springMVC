@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "/hello")
 public class HelloController implements EnvironmentAware {
 
+    public HelloController() {
+        System.out.println("helloController creating...");
+    }
+
     @RequestMapping("/world")
     public @ResponseBody String hello() {
         System.out.println("====hello");

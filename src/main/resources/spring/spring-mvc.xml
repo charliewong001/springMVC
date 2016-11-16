@@ -14,7 +14,5 @@
            http://www.springframework.org/schema/mvc/spring-mvc.xsd"
     default-autowire="byName" default-lazy-init="false">
     <mvc:annotation-driven/>
-    <context:component-scan base-package="web"></context:component-scan>
-    <context:component-scan base-package="listener"></context:component-scan>
     <context:annotation-config></context:annotation-config>
 </beans>

@@ -15,6 +15,12 @@
         <artifactId>spring-webmvc</artifactId>
         <version>4.3.3.RELEASE</version>
     </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
   </dependencies>
   
   <properties>
@@ -51,7 +57,7 @@
             </configuration>
         </plugin>
      </plugins>
-     <finalName>springMC</finalName>
+     <finalName>springMVC</finalName>
      <resources>
          <resource>
              <targetPath>${project.build.directory}/classes</targetPath>
