@@ -20,6 +20,12 @@ public class HelloController implements EnvironmentAware {
         return "hello";
     }
 
+    @RequestMapping("aa")
+    @ResponseBody
+    public String aa() {
+        return "hello";
+    }
+
     private Environment environment = null;
 
     @Override

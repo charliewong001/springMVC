@@ -10,7 +10,6 @@
            http://www.springframework.org/schema/context  
            http://www.springframework.org/schema/context/spring-context-3.2.xsd"
     default-autowire="byName" default-lazy-init="false">
-    <context:component-scan base-package="web"></context:component-scan>
     <context:component-scan base-package="listener"></context:component-scan>
     <context:component-scan base-package="postProcessor"></context:component-scan>
 </beans>
