@@ -12,7 +12,7 @@ import org.springframework.web.bind.support.SessionStatus;
 /**
  * 
  * @author Charlie
- * @SessionAttributes
+ * @SessionAttributes 用于在多个请求之间传递参数
  */
 @Controller
 @SessionAttributes(value = { "book", "description" }, types = { Double.class })
@@ -33,7 +33,7 @@ public class SessionAttributesController {
         System.out.println("get by modelAttributes : book = " + book);
         System.out.println("get by model : " + model.get("book") + ","
                 + model.get("description") + "," + model.get("price"));
-        sessionStatus.setComplete();
+        sessionStatus.setComplete();// 清除设置的参数,只是清除SessionAttribute中的参数,不会影响Session中的参数
         return "redirect:complete";
     }
 
